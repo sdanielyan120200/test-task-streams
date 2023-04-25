@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-task-streams';
+  randomNum!: Observable<number>;
+
+  constructor(private appService: AppService) { }
+
+  onUpdate() {
+    this.randomNum = this.appService.fetchData();
+  }
 }

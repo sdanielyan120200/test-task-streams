@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=1'
 };
 
 /*
